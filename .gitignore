@@ -3,3 +3,7 @@ log/*.log
 tmp/**/*
 config/database.yml
 db/*.sqlite3
+encodings.xml
+misc.xml
+modules.xml
+profiles_settings.xml
