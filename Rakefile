@@ -8,3 +8,8 @@ require 'rake/testtask'
 require 'rake/rdoctask'
 
 require 'tasks/rails'
+
+require 'rubygems'
+gem 'ci_reporter'
+require 'ci/reporter/rake/rspec'
+require 'ci/reporter/rake/test_unit'
