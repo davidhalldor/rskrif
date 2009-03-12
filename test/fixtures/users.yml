@@ -11,3 +11,11 @@ two:
   email: MyString
   hashed_password: MyString
   salt: MyString
+
+valid_user:
+  id: 1
+  name: dabbi
+  email: dabbi@dabbi.com 
+  hashed_password: a8ff0928b0a259d042d013bea309f2b6cb3efd1198966ccba6002c47520bf2b0
+    # clear password = 1234
+  created_at: <%= 1.days.ago.to_s(:db) %>
