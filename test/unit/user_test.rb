@@ -14,10 +14,10 @@ class UserTest < ActiveSupport::TestCase
   test "invalid with empty attributes" do
     user = User.new
     assert !user.valid?
-    #assert user.errors.invalid?(:name)
-    #assert user.errors.invalid?(:email)
-    #assert user.errors.invalid?(:password)
-    #assert user.errors.invalid?(:password_confirmation)
+    assert user.errors.invalid?(:name)
+    assert user.errors.invalid?(:email)
+    assert user.errors.invalid?(:password)
+    assert user.errors.invalid?(:password_confirmation)
   end
 
 end
