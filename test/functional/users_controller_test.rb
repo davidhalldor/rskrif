@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class UsersControllerTest < ActionController::TestCase
+  fixtures :users
+
   test "should get index" do
     get :index
     assert_response :success
@@ -17,7 +19,7 @@ class UsersControllerTest < ActionController::TestCase
       post :create, :user => { }
     end
 
-    assert_redirected_to user_path(assigns(:user))
+    assert_redirected_to users_path(assigns(:user))
   end
 
   test "should show user" do
