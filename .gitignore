@@ -6,3 +6,4 @@ encodings.xml
 misc.xml
 modules.xml
 profiles_settings.xml
+coverage/*
