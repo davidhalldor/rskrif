@@ -19,7 +19,7 @@ class UsersControllerTest < ActionController::TestCase
       post :create, :user => { :name => 'siggi', :email => 'siggi@example.com',
             :password => 'abc123', :password_confirmation => 'abc123'}
     end
-
+   
     #assert_redirected_to users_path(assigns(:user))
     assert_response :found
   end
