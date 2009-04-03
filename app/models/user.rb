@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :name
   attr_accessor :password_confirmation
   validates_confirmation_of :password
-  validate :password_non_blank
+  validate :password_non_blank 
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
 
   def self.authenticate(name, password)
@@ -33,7 +33,8 @@ class User < ActiveRecord::Base
 
 
   def password_non_blank
-    errors.add(:password, "Missing password") if hashed_password.blank? or password_confirmation.blank?
+     errors.add(:password, "missing") if hashed_password.blank?
+     errors.add(:password_confirmation, "missing") if password_confirmation.blank?
   end
 
   private

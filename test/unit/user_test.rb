@@ -5,7 +5,7 @@ class UserTest < ActiveSupport::TestCase
 
   # Replace this with your real tests.
 
-  def test_create_valid_user
+  test "create valid user" do
     user = User.new(:name => 'siggi', :email => 'siggi@example.com',
             :password => 'abc123', :password_confirmation => 'abc123')
     assert user.save
@@ -17,7 +17,6 @@ class UserTest < ActiveSupport::TestCase
     assert user.errors.invalid?(:name)
     assert user.errors.invalid?(:email)
     assert user.errors.invalid?(:password)
-    #assert user.errors.invalid?(:password_confirmation)
+    assert user.errors.invalid?(:password_confirmation)
   end
-
 end
