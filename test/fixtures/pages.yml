@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  title: MyString
+  body: MyText
+  position: 1
+
+two:
+  name: MyString
+  title: MyString
+  body: MyText
+  position: 1
+
+valid_page:
+  id: 1
+  name: about
+  title: About Us
+  body: This is the About page.
+  position: 0
+  updated_at: 2009-05-05 17:41:00

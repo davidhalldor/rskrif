@@ -1,0 +1,16 @@
+<% content_for(:sidemenu) do %>
+    <h3>Pages:</h3>
+    <ul>
+      <% for item in @pages %>
+          <li><%= link_to item.title, page_url(:id => item.name) %></li>
+      <% end %>
+    </ul>
+<% end %>
+
+<div>
+  <%= h @page.title %>
+</div>
+
+<div>
+  <%= h @page.body %>
+</div>
