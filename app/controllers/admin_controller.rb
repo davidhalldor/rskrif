@@ -1,4 +1,5 @@
 class AdminController < ApplicationController
+  layout "main"
   def login
     session[:user_id] = nil
     if request.post?

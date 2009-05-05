@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title><%= (@page.nil? || @page.title.nil?) ? "My Site" : @page.title %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+</head>
+<body style="background-color:#ddd">
+
+  <div style="min-height:600px; margin:0 20px; background-color:white">
+
+    <div style="height:80px; background-color:#000000; text-align:center; padding:1em">
+
+    <h1><a href="/">davidhalldor.com</a></h1>
+
+    </div>
+
+    <div>
+
+      <div style="float:right; background-color:#ffffff">
+
+        <%= yield :sidemenu %>
+
+      </div>
+
+      <div style="margin-left:100px">
+
+        <p><%= flash[:notice] %></p>
+
+        <%= yield :layout %>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

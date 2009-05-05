@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :pages,
+                :member => { :higher => :put,
+                           :lower => :put }
+
   map.resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -19,7 +23,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # Sample resource route with sub-resources:
   #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
-  
+
   # Sample resource route with more complex sub-resources
   #   map.resources :products do |products|
   #     products.resources :comments
@@ -42,4 +46,7 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing the them or commenting them out if you're using named routes and resources.
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
+  # any named page
+  map.connect ":id", :controller => "pages", :action => "show"
+  map.connect ":id.html", :controller => "pages", :action => "show"
 end

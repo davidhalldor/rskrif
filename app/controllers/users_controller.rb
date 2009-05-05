@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
+  layout "main"
   # GET /users
   # GET /users.xml
   def index
-    @users = User.all(:order => :name)
+    @users = User.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,6 +16,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @users = User.all
 
     respond_to do |format|
       format.html # show.html.erb
