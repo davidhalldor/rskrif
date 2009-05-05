@@ -1,18 +1,18 @@
 # be sure to change these
-# set :user, 'davidhalldor'
-# set :domain, 'davidhalldor.com'
-# staging
-set :user, 'dabbi'
-set :scm_passphrase, "" #This is your custom users password
-set :domain, '192.168.1.72'
+set :user, 'davidhalldor'
+set :domain, 'davidhalldor.com'
 set :application, 'rskrif'
+set :scm_passphrase, "" #This is your custom users password
+# staging
+#set :user, 'dabbi'
+#set :domain, '192.168.1.72'
 
 # file paths
 set :repository, "git@github.com:davidhalldor/rskrif.git"
 # set :repository,  "dabbi@adsl-13-196.simnet.is:git/#{application}.git"
-# set :deploy_to, "/home/#{user}/Sites/#{domain}"
+set :deploy_to, "/home/#{user}/Sites/#{domain}"
 # staging
-set :deploy_to, "/home/#{user}/work/rskrif"
+# set :deploy_to, "/home/#{user}/work/rskrif"
 
 # distribute your applications across servers (the instructions below put them
 # all on the same server, defined above as 'domain', adjust as necessary)
@@ -21,7 +21,7 @@ role :web, domain
 role :db, domain, :primary => true
 
 # you might need to set this if you aren't seeing password prompts
-#default_run_options[:pty] = true
+default_run_options[:pty] = true
 
 # As Capistrano executes in a non-interactive mode and therefore doesn't cause
 # any of your shell profile scripts to be run, the following might be needed
@@ -32,8 +32,8 @@ role :db, domain, :primary => true
 # default_environment['GEM_PATH']='<your paths>:/usr/lib/ruby/gems/1.8'
 
 # miscellaneous options
-ssh_options[:forward_agent] = true
-set :deploy_via, :remote_cache
+#ssh_options[:forward_agent] = true
+#set :deploy_via, :remote_cache
 set :scm, 'git'
 set :branch, 'master'
 set :scm_verbose, true
