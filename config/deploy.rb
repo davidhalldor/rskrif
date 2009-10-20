@@ -1,18 +1,18 @@
 # be sure to change these
-set :user, 'davidhalldor'
-set :domain, 'davidhalldor.com'
+#set :user, 'davidhalldor'
+#set :domain, 'davidhalldor.com'
 set :application, 'rskrif'
 set :scm_passphrase, "dhl950" #This is your custom users password
 # staging
-#set :user, 'dabbi'
-#set :domain, '192.168.1.72'
+set :user, 'dabbi'
+set :domain, '192.168.1.72'
 
 # file paths
 set :repository, "git@github.com:davidhalldor/rskrif.git"
 # set :repository,  "dabbi@adsl-13-196.simnet.is:git/#{application}.git"
-set :deploy_to, "/home/#{user}/Sites/#{domain}"
+#set :deploy_to, "/home/#{user}/Sites/#{domain}"
 # staging
-#set :deploy_to, "/home/#{user}/work/rskrif"
+set :deploy_to, "/home/#{user}/work/rskrif"
 
 # distribute your applications across servers (the instructions below put them
 # all on the same server, defined above as 'domain', adjust as necessary)

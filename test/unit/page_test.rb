@@ -13,6 +13,8 @@ class PageTest < ActiveSupport::TestCase
     page = Page.new(:name => 'about',
                     :title => 'About Us')
     assert !page.save
+    assert_equal I18n.translate('activerecord.errors.messages.taken'),
+            page.errors.on(:name)
   end
 
   test "invalid with empty attributes" do
