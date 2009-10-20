@@ -9,6 +9,4 @@ require 'rake/rdoctask'
 
 require 'tasks/rails'
 
-gem 'ci_reporter'
-
-require 'ci/reporter/rake/test_unit'
+require 'vendor/ci_reporter/lib/ci/reporter/rake/test_unit'
